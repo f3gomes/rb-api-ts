@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import { json } from "body-parser";
+import { userRoutes } from "./routes/userRoutes";
 import { main as connectDB } from "./config/database";
 
 const app = express();
@@ -15,7 +16,7 @@ app.use("/hello", (req, res) => {
   res.json({ message: "Hello Resume API!" });
 });
 
-// app.use("/users", userRoutes);
+app.use("/users", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
