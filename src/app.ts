@@ -1,6 +1,7 @@
 import cors from "cors";
 import express from "express";
 import { json } from "body-parser";
+import { main as connectDB } from "./config/database";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -8,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(json());
 
-// connectDB();
+connectDB();
 
 app.use("/hello", (req, res) => {
   res.json({ message: "Hello Resume API!" });
