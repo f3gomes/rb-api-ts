@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 export const languageSchema = new Schema(
   {
-    nane: {
+    name: {
       type: String,
       required: true,
     },
