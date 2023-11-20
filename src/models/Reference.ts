@@ -2,26 +2,19 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-export const referenceSchema = new Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    phone: {
-      type: String,
-      required: true,
-    },
-    email: {
-      type: String,
-      required: true,
-    },
+export const referenceSchema = new Schema({
+  name: {
+    type: String,
   },
-  { timestamps: true }
-);
+  title: {
+    type: String,
+  },
+  phone: {
+    type: String,
+  },
+  email: {
+    type: String,
+  },
+});
 
 export const Reference = mongoose.model("Reference", referenceSchema);

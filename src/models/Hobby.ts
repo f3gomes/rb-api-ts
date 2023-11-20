@@ -2,18 +2,13 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-export const hobbySchema = new Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
-    icon: {
-      type: String,
-      required: true,
-    },
+export const hobbySchema = new Schema({
+  name: {
+    type: String,
   },
-  { timestamps: true }
-);
+  icon: {
+    type: String,
+  },
+});
 
 export const Hobby = mongoose.model("Hobby", hobbySchema);

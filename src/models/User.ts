@@ -18,15 +18,12 @@ const userSchema = new Schema(
     },
     title: {
       type: String,
-      required: true,
     },
     address: {
       type: String,
-      required: true,
     },
     city: {
       type: String,
-      required: true,
     },
     email: {
       type: String,
@@ -35,43 +32,33 @@ const userSchema = new Schema(
     },
     phone: {
       type: String,
-      required: true,
     },
     about: {
       type: String,
-      required: true,
     },
     socials: {
       type: [socialSchema],
-      required: true,
     },
     education: {
       type: [educationSchema],
-      required: true,
     },
     skills: {
       type: [skillSchema],
-      required: true,
     },
     experiences: {
       type: [experienceSchema],
-      required: true,
     },
     references: {
       type: [referenceSchema],
-      required: true,
     },
     languages: {
       type: [languageSchema],
-      required: true,
     },
     hobbys: {
       type: [hobbySchema],
-      required: true,
     },
     paidOut: {
       type: Boolean,
-      required: true,
       default: false,
     },
   },

@@ -2,18 +2,13 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-export const languageSchema = new Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
-    level: {
-      type: String,
-      required: true,
-    },
+export const languageSchema = new Schema({
+  name: {
+    type: String,
   },
-  { timestamps: true }
-);
+  level: {
+    type: String,
+  },
+});
 
 export const Language = mongoose.model("Language", languageSchema);

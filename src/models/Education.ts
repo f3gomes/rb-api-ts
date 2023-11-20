@@ -2,22 +2,16 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-export const educationSchema = new Schema(
-  {
-    title: {
-      type: String,
-      required: true,
-    },
-    studies: {
-      type: String,
-      required: true,
-    },
-    year: {
-      type: String,
-      required: true,
-    },
+export const educationSchema = new Schema({
+  title: {
+    type: String,
   },
-  { timestamps: true }
-);
+  studies: {
+    type: String,
+  },
+  year: {
+    type: String,
+  },
+});
 
 export const Education = mongoose.model("Education", educationSchema);
