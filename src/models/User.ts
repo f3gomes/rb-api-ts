@@ -7,6 +7,15 @@ import { languageSchema } from "./Language";
 import { referenceSchema } from "./Reference";
 import { educationSchema } from "./Education";
 import { experienceSchema } from "./Experience";
+import {
+  dedfaultSkills,
+  defaultEducation,
+  defaultExperiences,
+  defaultHobbys,
+  defaultLanguages,
+  defaultReferences,
+  defaultSocials,
+} from "../default/types";
 
 const { Schema } = mongoose;
 
@@ -38,28 +47,31 @@ const userSchema = new Schema(
     },
     socials: {
       type: [socialSchema],
+      default: defaultSocials,
     },
     education: {
       type: [educationSchema],
+      defaultSocials: defaultEducation,
     },
     skills: {
       type: [skillSchema],
+      default: dedfaultSkills,
     },
     experiences: {
       type: [experienceSchema],
+      default: defaultExperiences,
     },
     references: {
       type: [referenceSchema],
+      default: defaultReferences,
     },
     languages: {
       type: [languageSchema],
+      default: defaultLanguages,
     },
     hobbys: {
       type: [hobbySchema],
-    },
-    paidOut: {
-      type: Boolean,
-      default: false,
+      default: defaultHobbys,
     },
   },
   { timestamps: true }
