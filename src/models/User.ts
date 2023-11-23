@@ -51,7 +51,7 @@ const userSchema = new Schema(
     },
     education: {
       type: [educationSchema],
-      defaultSocials: defaultEducation,
+      default: defaultEducation,
     },
     skills: {
       type: [skillSchema],
