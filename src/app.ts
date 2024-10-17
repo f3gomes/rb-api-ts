@@ -4,7 +4,7 @@ import { json } from "body-parser";
 import { userRoutes } from "./routes/userRoutes";
 import { main as connectDB } from "./config/database";
 
-const app = express();
+export const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
