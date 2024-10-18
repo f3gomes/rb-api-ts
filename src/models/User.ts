@@ -1,12 +1,5 @@
 import mongoose from "mongoose";
 
-import { hobbySchema } from "./Hobby";
-import { skillSchema } from "./Skill";
-import { socialSchema } from "./Social";
-import { languageSchema } from "./Language";
-import { referenceSchema } from "./Reference";
-import { educationSchema } from "./Education";
-import { experienceSchema } from "./Experience";
 import {
   dedfaultSkills,
   defaultEducation,
@@ -46,31 +39,106 @@ const userSchema = new Schema(
       type: String,
     },
     socials: {
-      type: [socialSchema],
+      type: [
+        {
+          name: {
+            type: String,
+          },
+          link: {
+            type: String,
+          },
+          icon: {
+            type: String,
+          },
+        },
+      ],
       default: defaultSocials,
     },
     education: {
-      type: [educationSchema],
+      type: [
+        {
+          title: {
+            type: String,
+          },
+          studies: {
+            type: String,
+          },
+          year: {
+            type: String,
+          },
+        },
+      ],
       default: defaultEducation,
     },
     skills: {
-      type: [skillSchema],
+      type: [
+        {
+          name: {
+            type: String,
+          },
+        },
+      ],
       default: dedfaultSkills,
     },
     experiences: {
-      type: [experienceSchema],
+      type: [
+        {
+          title: {
+            type: String,
+          },
+          yearCompany: {
+            type: String,
+          },
+          description: {
+            type: String,
+          },
+        },
+      ],
       default: defaultExperiences,
     },
     references: {
-      type: [referenceSchema],
+      type: [
+        {
+          name: {
+            type: String,
+          },
+          title: {
+            type: String,
+          },
+          phone: {
+            type: String,
+          },
+          email: {
+            type: String,
+          },
+        },
+      ],
       default: defaultReferences,
     },
     languages: {
-      type: [languageSchema],
+      type: [
+        {
+          name: {
+            type: String,
+          },
+          level: {
+            type: String,
+          },
+        },
+      ],
       default: defaultLanguages,
     },
     hobbys: {
-      type: [hobbySchema],
+      type: [
+        {
+          name: {
+            type: String,
+          },
+          icon: {
+            type: String,
+          },
+        },
+      ],
       default: defaultHobbys,
     },
   },
