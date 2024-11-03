@@ -14,6 +14,6 @@ userRoutes.get("/users", getUsers);
 userRoutes.get("/users/names", getUsersNameList);
 userRoutes.get("/users/:email", getUserByEmail);
 
-userRoutes.post("users/new", createUser);
-userRoutes.put("users/:id", updateUser);
-userRoutes.delete("users/:id", deleteUser);
+userRoutes.post("/users/new", createUser);
+userRoutes.put("/users/:id", updateUser);
+userRoutes.delete("/users/:id", deleteUser);
