@@ -12,11 +12,11 @@ app.use(json());
 
 connectDB();
 
-app.use("/hello", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Hello Resume API!" });
 });
 
-app.use("/users", userRoutes);
+app.use("/api", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
